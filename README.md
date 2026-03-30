@@ -1,7 +1,7 @@
 ---
 
 <p align="center">
-<img src="furtif-audio-logo.svg" width="50%">
+<img src="furtif-audio-logo.svg" width="80%">
 </p>
 
 # Furtif-Audio v1.2
