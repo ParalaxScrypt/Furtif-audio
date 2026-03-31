@@ -10,103 +10,124 @@
 <img src="preview-interface.png" max-width="1000px">
 </p>
 
-# Furtif-Audio v1.17
+# Furtif-Audio v1.2
 
-ESP32-based compact spy microphone with real-time audio streaming
-
-This project delivers a **ready-to-flash ESP32 firmware** with a fully responsive web interface for audio streaming. No Arduino IDE or code compilation is needed — only the provided binaries.
+ESP32-based compact spy microphone with real-time audio streaming over Wi-Fi. Stream audio discretly to a browser or VLC.
 
 ---
 
-## 🛠 Hardware Requirements
+## 🛠️ Matériel requis
 
-| Component      | Description                                                     |
-| -------------- | --------------------------------------------------------------- |
-| **ESP32**      | ESP32 WROOM-32 module                                           |
-| **Microphone** | I2S MEMS microphone ICS43434                                    |
-| **Power**      | 5V USB power or LiPo battery                                    |
-| **Optional**   | Small enclosure for compact installation, wires, and connectors |
-
-
-## 📦 Included Files
-
-* `furtif.ino.bin` → Main firmware for ESP32
-* `littlefs.bin` → LittleFS image containing all web interface files (HTML, CSS, JS, images)
-
-> Both files are required for the ESP32 to function properly.
+| Composant    | Description                            |
+| ------------ | -------------------------------------- |
+| ESP32        | Module ESP32 WROOM-32                  |
+| Microphone   | I2S MEMS ICS43434                      |
+| Alimentation | 5V USB ou batterie LiPo                |
+| Optionnel    | Boîtier compact, câbles et connecteurs |
 
 ---
 
-## ⚡ Flashing Instructions (Windows Example)
+## 📂 Fichiers inclus
 
-### 1️⃣ Prerequisites
+* `furtif.ino.bootloader.bin` → Bootloader ESP32
+* `furtif.ino.partitions.bin` → Table des partitions
+* `furtif.ino.bin` → Firmware principal ESP32
+* `/data` → Fichiers HTML, CSS, JS pour l’interface web (à uploader via Arduino IDE)
 
-* ESP32 connected via USB
-* Python 3.x installed
-* `esptool.py` installed:
+---
+
+## ⚡ Flashage ESP32 (Windows)
+
+### 1️⃣ Prérequis
+
+* ESP32 connecté en USB
+* Python 3.x installé
+* `esptool.py` installé :
 
 ```bash
 pip install esptool
 ```
 
-### 2️⃣ Flashing the ESP32
+### 2️⃣ Flashage via `.bat`
 
-1. Download the two binary files from GitHub: `furtif.ino.bin` and `littlefs.bin`
-2. Find the COM port of your ESP32 (e.g., COM3)
-3. Create a file `flash_esp32.bat` with the following content:
+Parfait ! Voici une version claire et concise du **point 2 – Flashage via `.bat`** adaptée à ton projet avec les 3 fichiers bin et nommée `flash.bat` :
+
+---
+
+### 2️⃣ Flashage via `flash.bat`
+
+Crée un fichier `flash.bat` dans le même dossier que tes binaires (`bootloader.bin`, `partition-table.bin`, `furtif.ino.bin`) avec ce contenu :
 
 ```bat
 @echo off
+REM ============================================
+REM  Furtif-Audio - Flash ESP32 (tous les fichiers)
+REM ============================================
+
 set COM_PORT=COM3
-set BAUD=460800
+set BAUD=921600
 
+REM ----------------------------
+REM Flash bootloader
+REM ----------------------------
+echo Flashing bootloader...
+python -m esptool --chip esp32 --port %COM_PORT% --baud %BAUD% write-flash 0x1000 furtif.ino.bootloader.bin
+
+REM ----------------------------
+REM Flash partitions
+REM ----------------------------
+echo Flashing partitions...
+python -m esptool --chip esp32 --port %COM_PORT% --baud %BAUD% write-flash 0x8000 furtif.ino.partitions.bin
+
+REM ----------------------------
+REM Flash firmware
+REM ----------------------------
 echo Flashing firmware...
-esptool.py --chip esp32 --port %COM_PORT% --baud %BAUD% write_flash -z 0x1000 furtif.ino.bin
+python -m esptool --chip esp32 --port %COM_PORT% --baud %BAUD% write-flash 0x10000 furtif.ino.bin
 
-echo Flashing LittleFS...
-esptool.py --chip esp32 --port %COM_PORT% --baud %BAUD% write_flash -z 0x110000 littlefs.bin
-
-echo Flash complete! Unplug and replug your ESP32.
-pause
+REM ----------------------------
+REM Fin
+REM ----------------------------
+echo All flashing steps complete! Unplug and replug your ESP32.
 ```
 
-4. Double-click `flash_esp32.bat` → your ESP32 will be flashed with firmware and web interface.
+#### ✅ Instructions
 
-> The addresses `0x1000` (firmware) and `0x110000` (LittleFS) are pre-configured for this project.
-
----
-
-## 🌐 Initial Setup / Wi-Fi Configuration
-
-1. Power on the ESP32.
-2. Connect to the Wi-Fi network **FURTIF-AUDIO-Setup** (password: `12345678`).
-3. Open a browser and go to `http://192.168.8.8/`.
-4. Enter your Wi-Fi SSID and password, then click **Save**.
-5. The ESP32 will restart and connect to your Wi-Fi network.
+1. Connecte l’ESP32 à ton PC via USB.
+2. Mets à jour `COM_PORT` si nécessaire (vérifie le port dans le gestionnaire de périphériques).
+3. Double-clique sur `flash.bat` → le bootloader, la table de partitions et le firmware seront flashés automatiquement.
+4. L’ESP32 est prêt à être utilisé après avoir été rebranché.
 
 ---
 
-## 📡 Streaming Audio
+## 💻 Upload des fichiers d’interface via Arduino IDE
 
-1. Find the ESP32 IP address on your network.
-2. Open a browser and navigate to the ESP32 IP.
-3. Copy the audio stream URL.
-4. Open VLC or another media player supporting network streams.
-5. Paste the URL and enjoy real-time audio streaming.
-
----
-
-## 🔧 Optional
-
-* Reset the device and Wi-Fi configuration directly from the web interface using the **Reset** button.
+1. Ouvre Arduino IDE et sélectionne ta carte ESP32.
+2. Assure-toi d’avoir installé le plugin **ESP32 LittleFS Data Upload**.
+3. Dans Arduino IDE, sélectionne **Tools → ESP32 LittleFS Upload**.
+4. Choisis le dossier `/data` → clique sur **Upload**.
+5. L’ESP32 aura l’interface web complète pour le streaming.
 
 ---
 
-## 💡 Tips
+## ⚙️ Configuration initiale Wi-Fi
 
-* Ensure your firewall/router allows devices to communicate on the local network.
-* Use a stable Wi-Fi network for best performance.
-* If the ESP32 cannot connect to a saved Wi-Fi network at startup, it automatically switches back to AP mode for reconfiguration.
+1. Allume l’ESP32.
+2. Connecte-toi au réseau Wi-Fi `FURTIF-AUDIO-Setup`.
+3. Ouvre un navigateur → `http://192.168.8.8/`.
+4. Saisis ton SSID et mot de passe Wi-Fi → clique sur **Save**.
+5. L’ESP32 redémarre et rejoint ton réseau.
 
 ---
+
+## 🎧 Streaming audio
+
+1. Récupère l’adresse IP de l’ESP32 sur ton réseau.
+2. Ouvre un navigateur et navigue vers cette IP.
+3. Copie l’URL du flux audio.
+4. Ouvre VLC ou un autre lecteur réseau compatible.
+5. Colle l’URL → écoute le streaming en temps réel.
+
+
+
 
