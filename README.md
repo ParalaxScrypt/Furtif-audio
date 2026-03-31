@@ -32,7 +32,7 @@ ESP32-based compact spy microphone with real-time audio streaming over Wi-Fi. St
 * `furtif.ino.bootloader.bin` → Bootloader ESP32
 * `furtif.ino.partitions.bin` → Table des partitions
 * `furtif.ino.bin` → Firmware principal ESP32
-* `/data` → Fichiers HTML, CSS, JS pour l’interface web (à uploader via Arduino IDE)
+* `/data` → Fichiers HTML, CSS, JS pour l’interface web (à uploader via Arduino IDE avec le plugin ESP32 LittleFS Data Upload)
 
 ---
 
