@@ -3,7 +3,9 @@
 <p align="center">
 <img src="furtif-audio-logo.svg" width="80%">
 </p>
-
+<p align="center">
+<img src="preview-interface.png" max-width="1000px">
+</p>
 # Furtif-Audio v1.17
 
 ESP32-based compact spy microphone with real-time audio streaming
