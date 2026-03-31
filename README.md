@@ -56,7 +56,7 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 #### ✅ Instructions
 
 1. Connecte l’ESP32 à ton PC via USB.
-2. Mets à jour `COM_PORT` si nécessaire (vérifie le port dans le gestionnaire de périphériques).
+2. Mets à jour `COM_PORT` du fichier `flash.bat` si nécessaire (vérifie le port dans le gestionnaire de périphériques).
 3. Double-clique sur `flash.bat` → le bootloader, la table de partitions et le firmware seront flashés automatiquement.
 4. L’ESP32 est prêt à être utilisé après avoir été rebranché.
 
