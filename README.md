@@ -47,49 +47,11 @@ ESP32-based compact spy microphone with real-time audio streaming over Wi-Fi. St
 ```bash
 pip install esptool
 ```
-
-### 2️⃣ Flashage via `.bat`
-
-Parfait ! Voici une version claire et concise du **point 2 – Flashage via `.bat`** adaptée à ton projet avec les 3 fichiers bin et nommée `flash.bat` :
-
 ---
 
 ### 2️⃣ Flashage via `flash.bat`
 
-Crée un fichier `flash.bat` dans le même dossier que tes binaires (`bootloader.bin`, `partition-table.bin`, `furtif.ino.bin`) avec ce contenu :
-
-```bat
-@echo off
-REM ============================================
-REM  Furtif-Audio - Flash ESP32 (tous les fichiers)
-REM ============================================
-
-set COM_PORT=COM3
-set BAUD=921600
-
-REM ----------------------------
-REM Flash bootloader
-REM ----------------------------
-echo Flashing bootloader...
-python -m esptool --chip esp32 --port %COM_PORT% --baud %BAUD% write-flash 0x1000 furtif.ino.bootloader.bin
-
-REM ----------------------------
-REM Flash partitions
-REM ----------------------------
-echo Flashing partitions...
-python -m esptool --chip esp32 --port %COM_PORT% --baud %BAUD% write-flash 0x8000 furtif.ino.partitions.bin
-
-REM ----------------------------
-REM Flash firmware
-REM ----------------------------
-echo Flashing firmware...
-python -m esptool --chip esp32 --port %COM_PORT% --baud %BAUD% write-flash 0x10000 furtif.ino.bin
-
-REM ----------------------------
-REM Fin
-REM ----------------------------
-echo All flashing steps complete! Unplug and replug your ESP32.
-```
+Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`bootloader.bin`, `partition-table.bin`, `furtif.ino.bin`).
 
 #### ✅ Instructions
 
