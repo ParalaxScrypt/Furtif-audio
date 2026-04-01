@@ -27,6 +27,18 @@ Ce dispositif permet de diffuser le son discrètement vers un navigateur web ou 
 | Alimentation | 5V USB ou batterie LiPo                |
 | Optionnel    | Boîtier compact, câbles et connecteurs |
 
+
+## 🔌 Connexions ESP32 WROOM-32 ↔ ICS43434
+
+| Broche module | Signal I2S | ESP32 WROOM-32 |
+|--------------------------------|------------|----------------|
+| **3V**                          | VDD        | 3.3V           |
+| **GND**                         | GND        | GND            |
+| **BCLK**                        | BCLK       | GPIO 32        |
+| **DOUT**                        | DATA       | GPIO 33        |
+| **LRCL**                        | WS         | GPIO 25        |
+| **SEL**                         | L/R        | GND (gauche)   |
+
 ---
 
 ## 📂 Fichiers inclus
