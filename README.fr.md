@@ -79,12 +79,11 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 ## 💻 Upload des fichiers d’interface via Arduino IDE
 
 
-1. Ouvre l’IDE Arduino et sélectionne ta carte ESP32.
-2. Assure-toi d’avoir installé le plugin ESP32 LittleFS Data Upload. Avec l’IDE Arduino 2, tu peux suivre ce [tutoriel complet](https://randomnerdtutorials.com/arduino-ide-2-install-esp32-littlefs/).
-3. Après avoir créé et enregistré un croquis vide, dans l’IDE Arduino, clique sur Croquis > Afficher le dossier du croquis, puis crée un dossier `/data` et copie-y les fichiers .html, .css et .json.
-4. Dans l’IDE Arduino, appuie sur [Ctrl] + [Shift] + [P] sous Windows.
-5. Cherche Upload LittleFS to Pico/ESP8266/ESP32 dans la liste, puis clique dessus.
-6. L’ESP32 disposera alors de l’interface web complète pour le streaming.
+1. Ouvrez l'Arduino IDE et sélectionnez votre carte ESP32.
+2. Assurez-vous que le plugin **ESP32 LittleFS Data Upload** est installé. Avec Arduino IDE 2, vous pouvez suivre ce tutoriel : https://randomnerdtutorials.com/arduino-ide-2-install-esp32-littlefs/
+3. Créez et enregistrez un sketch vide. Ensuite, allez dans **Outils > Partition Scheme** et sélectionnez **Minimal SPIFFS (1,9 MB app / 128 KB SPIFFS)**. Puis, allez dans **Croquis > Afficher le dossier du croquis**, créez un dossier `/data` et copiez-y vos fichiers `.html`, `.css` et `.json`.
+4. Dans l'Arduino IDE, appuyez sur **[Ctrl] + [Shift] + [P]** (Windows), recherchez **Upload LittleFS to Pico/ESP8266/ESP32** et cliquez dessus.
+5. L'ESP32 hébergera maintenant l'interface web complète pour le streaming.
 
 ---
 
