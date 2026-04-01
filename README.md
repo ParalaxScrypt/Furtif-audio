@@ -94,6 +94,11 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 4. Ouvre VLC ou un autre lecteur réseau compatible.
 5. Colle l’URL → écoute le streaming en temps réel.
 
+---
 
+## ⚠️ Avertissement
 
+Ce projet de dispositif d'écoute à distance est proposé uniquement à des fins pédagogiques et techniques.
+Il ne doit en aucun cas être utilisé à des fins illégales ou pour porter atteinte à la vie privée d’autrui.
 
+L’utilisateur est seul responsable de l’usage qu’il en fait. Veuillez vous assurer de respecter les lois et réglementations en vigueur dans votre pays avant toute utilisation.
