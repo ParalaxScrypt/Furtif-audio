@@ -27,6 +27,9 @@ Ce dispositif permet de diffuser le son discrètement vers un navigateur web ou 
 | Alimentation | 5V USB ou batterie LiPo                |
 | Optionnel    | Boîtier compact, câbles et connecteurs |
 
+<p align="center">
+<img src="preview-hardware.png" max-width="1000px">
+</p>
 
 ## 🔌 Connexions ESP32 WROOM-32 ↔ ICS43434
 
