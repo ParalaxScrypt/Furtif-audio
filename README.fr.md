@@ -99,11 +99,12 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 
 ## 🎧 Streaming audio
 
-1. Récupère l’adresse IP de l’ESP32 sur ton réseau.
-2. Ouvre un navigateur et navigue vers cette IP.
-3. Copie l’URL du flux audio.
-4. Ouvre VLC, Média → Ouvrir un flux réseau.
-5. Colle l’URL → écoute le streaming en temps réel.
+1. Récupérez l’adresse IP de l’ESP32 sur votre réseau.  
+2. Ouvrez un navigateur et accédez à cette adresse IP.  
+3. Connectez-vous au tableau de bord avec les identifiants définis dans le fichier `users.json` (par défaut : username : admin, password : 1234).  
+4. Copiez l’URL du flux audio.  
+5. Ouvrez VLC → Média → Ouvrir un flux réseau.  
+6. Collez l’URL → écoutez en temps réel.
 
 ---
 
