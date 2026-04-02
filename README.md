@@ -98,11 +98,12 @@ Use the `flash.bat` file located in the same folder as your binaries (`furtif.in
 
 ## 🎧 Audio Streaming
 
-1. Get the ESP32 IP address on your network.
-2. Open a browser and navigate to this IP.
-3. Copy the audio stream URL.
-4. Open VLC → Media → Open Network Stream.
-5. Paste the URL → listen in real time.
+1. Get the ESP32 IP address on your network.  
+2. Open a browser and navigate to this IP.  
+3. Log in to the dashboard using the credentials defined in the `users.json` file (default: username: admin, password: 1234).  
+4. Copy the audio stream URL.  
+5. Open VLC → Media → Open Network Stream.  
+6. Paste the URL → listen in real time.  
 
 ---
 
