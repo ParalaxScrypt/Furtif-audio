@@ -94,7 +94,7 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 
 1. Récupérez l’adresse IP de l’ESP32 sur votre réseau.  
 2. Ouvrez un navigateur et accédez à cette adresse IP.  
-3. Connectez-vous au tableau de bord avec les identifiants (username : admin, password : 1234).  
+3. Connectez-vous au tableau de bord avec les identifiants (username : furtif, password : stream1234).  
 4. Copiez l’URL du flux audio.  
 5. Ouvrez VLC → Média → Ouvrir un flux réseau.  
 6. Collez l’URL → écoutez en temps réel.
