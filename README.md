@@ -25,6 +25,9 @@ This device allows you to stream audio discreetly to a web browser or VLC, while
 | Power Supply | 5V USB or LiPo battery               |
 | Optional     | Compact enclosure, wires, connectors |
 
+<p align="center">
+<img src="preview-hardware.png" max-width="1000px">
+</p>
 ---
 
 ## 🔌 ESP32 WROOM-32 ↔ ICS43434 Connections
