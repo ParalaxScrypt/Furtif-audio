@@ -66,7 +66,7 @@ pip install esptool
 
 ### 2️⃣ Flashing via `flash.bat`
 
-Use the `flash.bat` file located in the same folder as your binaries (`furtif.ino.bootloader.bin`, `furtif.ino.partitions.bin`, `furtif.ino.bin`).
+Use the `flash.bat` file located in the same folder as your binaries (`furtif.ino.bootloader.bin`, `furtif.ino.partitions.bin`, `furtif.ino.bin`, `littlefs.bin`).
 
 #### ✅ Instructions
 
