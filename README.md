@@ -40,12 +40,13 @@ This device allows you to stream audio discreetly to a web browser or VLC, while
 
 ---
 
-## 📂 Included Files
+## 📂 Included Files /bin
 
-* `furtif.ino.bootloader.bin` → ESP32 bootloader
-* `furtif.ino.partitions.bin` → Partition table
-* `furtif.ino.bin` → Main ESP32 firmware
-* `/data` → HTML, CSS, JSON files for the web interface (to upload via Arduino IDE using the ESP32 LittleFS Data Upload plugin)
+* `flash.bat` → Windows batch script to flash all binaries to the ESP32 in one step
+* `furtif.ino.bootloader.bin` → ESP32 bootloader  
+* `furtif.ino.partitions.bin` → Partition table  
+* `furtif.ino.bin` → Main ESP32 firmware  
+* `littlefs.bin` → LittleFS content (web files and dashboard)
 
 ---
 
@@ -73,16 +74,6 @@ Use the `flash.bat` file located in the same folder as your binaries (`furtif.in
 2. Update `COM_PORT` in the `flash.bat` file if needed (check Device Manager).
 3. Double-click `flash.bat` → bootloader, partitions, and firmware will be flashed automatically.
 4. The ESP32 is ready to use after reconnecting.
-
----
-
-## 💻 Upload Web Interface Files via Arduino IDE
-
-1. Open Arduino IDE and select your ESP32 board.
-2. Make sure the ESP32 LittleFS Data Upload plugin is installed. With Arduino IDE 2, you can follow this tutorial: https://randomnerdtutorials.com/arduino-ide-2-install-esp32-littlefs/
-3. Create and save an empty sketch. Then, go to **Tools > Partition Scheme** and select **Minimal SPIFFS (1.9 MB app / 128 KB SPIFFS)**. Next, go to **Sketch > Show Sketch Folder**, create a `/data` folder, and copy your `.html`, `.css`, and `.json` files into it.
-4. In Arduino IDE, press **[Ctrl] + [Shift] + [P]** (Windows), search for **Upload LittleFS to Pico/ESP8266/ESP32**, and click it.
-5. The ESP32 will now host the full web interface for streaming.
 
 ---
 
