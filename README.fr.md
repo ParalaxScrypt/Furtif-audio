@@ -83,7 +83,7 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 ## ⚙️ Configuration initiale Wi-Fi
 
 1. Allume l’ESP32.
-2. Connecte-toi au réseau Wi-Fi `FURTIF-AUDIO-Setup`.
+2. Connecte-toi au réseau Wi-Fi `FURTIF-AUDIO-Setup` avec le mot de passe `12345678`.
 3. Ouvre un navigateur → `http://192.168.8.8/`.
 4. Saisis ton SSID et mot de passe Wi-Fi → clique sur **Save**.
 5. L’ESP32 redémarre et rejoint ton réseau.
@@ -94,7 +94,7 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 
 1. Récupérez l’adresse IP de l’ESP32 sur votre réseau.  
 2. Ouvrez un navigateur et accédez à cette adresse IP.  
-3. Connectez-vous au tableau de bord avec les identifiants (username : furtif, password : stream1234).  
+3. Connectez-vous au tableau de bord vos identifiants.
 4. Copiez l’URL du flux audio.  
 5. Ouvrez VLC → Média → Ouvrir un flux réseau.  
 6. Collez l’URL → écoutez en temps réel.
