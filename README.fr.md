@@ -85,7 +85,7 @@ Utilise le fichier `flash.bat` dans le même dossier que tes binaires (`furtif.i
 1. Allume l’ESP32.
 2. Connecte-toi au réseau Wi-Fi `FURTIF-AUDIO-Setup` avec le mot de passe `12345678`.
 3. Ouvre un navigateur → `http://192.168.8.8/`.
-4. Saisis ton SSID et mot de passe Wi-Fi → clique sur **Save**.
+4. Saisis ton SSID et mot de passe Wi-Fi → clique sur **Enregistrer**.
 5. L’ESP32 redémarre et rejoint ton réseau.
 
 ---
