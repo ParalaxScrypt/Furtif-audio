@@ -94,7 +94,8 @@ Use the `flash.bat` file located in the same folder as your binaries (`furtif.in
 ## 🎧 Audio Streaming
 
 1. Get the ESP32 IP address on your network.  
-2. Open a browser and navigate to this IP.  
+2. Open a browser and navigate to this IP.
+  > *(You can use mobile apps such as Fing, IP Tools, Network Scanner, or Network Analyzer… locate the device ESP_xxxxxx or ESP32-xxxxxx and copy its IP address)*
 3. Log in to your dashboard using your credentials.
 > ⚠️ To get your own credentials and access the microphone as well as all features, contact me at: paralax@fluctual.fr 
 4. Copy the audio stream URL.  
