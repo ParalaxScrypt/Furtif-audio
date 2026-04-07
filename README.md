@@ -5,7 +5,7 @@
 ---
 
 <p align="center">
-<img src="preview-interface.png" max-width="1000px">
+<img src="preview-interface.png" max-width="1000px" width="100%">
 </p>
 
 # Furtif-Audio v1.2
@@ -26,7 +26,7 @@ This device allows you to stream audio discreetly to a web browser or VLC, while
 | Optional     | Compact enclosure, wires, connectors |
 
 <p align="center">
-<img src="preview-hardware.png" max-width="1000px">
+<img src="preview-hardware.png" max-width="1000px"  width="100%">
 </p>
 
 ---
