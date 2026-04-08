@@ -7,7 +7,7 @@
 ---
 
 <p align="center">
-<img src="preview-interface.png" max-width="1000px">
+<img src="preview-interface.png" max-width="1000px" width="100%">
 </p>
 
 # Furtif-Audio v1.2
@@ -28,7 +28,7 @@ Ce dispositif permet de diffuser le son discrètement vers un navigateur web ou 
 | Optionnel    | Boîtier compact, câbles et connecteurs |
 
 <p align="center">
-<img src="preview-hardware.png" max-width="1000px">
+<img src="preview-hardware.png" max-width="1000px" width="100%">
 </p>
 
 ## 🔌 Connexions ESP32 WROOM-32 ↔ ICS43434
