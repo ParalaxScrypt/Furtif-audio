@@ -11,10 +11,12 @@
 # Furtif-Audio v1.2
 <span data-fr="Microphone d’écoute à distance compact à base d’ESP32 avec streaming audio en temps réel via Wi‑Fi.
 Ce dispositif permet de diffuser le son discrètement vers un navigateur web ou VLC, tout en offrant une interface web intuitive pour une gestion facile. Il intègre des réglages de sensibilité du microphone, un système intelligent de mise à jour du firmware, ainsi qu’un contrôle intégré du reset.">
-Compact remote listening microphone based on ESP32 with real-time audio streaming over Wi-Fi.
 
+Compact remote listening microphone based on ESP32 with real-time audio streaming over Wi-Fi.
 This device allows you to stream audio discreetly to a web browser or VLC, while providing an intuitive web interface for easy management. It includes microphone sensitivity adjustment, an intelligent firmware update system, and an integrated reset control.
+
 </span>
+
 ---
 
 ## 🛠️ Required Hardware
