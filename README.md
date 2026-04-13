@@ -36,7 +36,7 @@ This device allows you to stream audio discreetly to a web browser or VLC, while
 | ---------- | ---------- | -------------- |
 | **3V**     | VDD        | 3.3V           |
 | **GND**    | GND        | GND            |
-| **BCLK**   | BCLK       | GPIO 32        |
+| **BCLK**   | BCLK       | GPIO 26        |
 | **DOUT**   | DATA       | GPIO 33        |
 | **LRCL**   | WS         | GPIO 25        |
 | **SEL**    | L/R        | GND (left)     |
