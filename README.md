@@ -41,6 +41,10 @@ This device allows you to stream audio discreetly to a web browser or VLC, while
 | **LRCL**   | WS         | GPIO 25        |
 | **SEL**    | L/R        | GND (left)     |
 
+<p align="center">
+<img src="preview-shema.png" max-width="1000px"  width="80%">
+</p>
+
 ---
 
 ## 📂 Included Files /bin
